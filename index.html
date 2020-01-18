@@ -5,78 +5,66 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="assets/main.css">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css"/>
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" />
+    <link rel="stylesheet" href="assets/main.css">
 
     <title>Hsin Wei Li</title>
 </head>
 
 <body>
-    <nav id="topNav" class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-fixed-top" id="nav-bar">
         <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-navbar">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                     <span class="sr-only">Toggle navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand page-scroll" href="#first"><i class="ion-ios-analytics-outline"></i> Landing Zero</a>
+                <a class="navbar-brand" href="#"><i class="far fa-sun"></i> Why Nut</a>
             </div>
-            <div class="navbar-collapse collapse" id="bs-navbar">
-                <ul class="nav navbar-nav">
-                    <li><a class="page-scroll" href="#one">Intro</a></li>
-                    <li><a class="page-scroll" href="#two">Highlights</a></li>
-                    <li><a class="page-scroll" href="#three">Gallery</a></li>
-                    <li><a class="page-scroll" href="#four">Features</a></li>
-                    <li><a class="page-scroll" href="#last">Contact</a></li>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-            </div>
-        </div>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
     </nav>
     <!--scripts loaded here from cdn for performance -->
-    <script src="//cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script>
-        (function($) {
-            "use strict";
-            $('body').scrollspy({
-                target: '.navbar-fixed-top',
-                offset: 60
-            });
+    <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
 
-            $('#topNav').affix({
-                offset: {
-                    top: 200
-                }
-            });
-    
-            new WOW().init();
-    
-            $('a.page-scroll').bind('click', function(event) {
-                var $ele = $(this);
-                $('html, body').stop().animate({
-                    scrollTop: ($($ele.attr('href')).offset().top - 60)
-                }, 1450, 'easeInOutExpo');
-                event.preventDefault();
-            });
-    
-            $('.navbar-collapse ul li a').click(function() {
+        $(document).ready(function () {
+            $('.navbar-collapse ul li a').click(function () {
                 /* always close responsive nav after click */
                 $('.navbar-toggle:visible').click();
             });
 
-            $('#galleryModal').on('show.bs.modal', function (e) {
-                $('#galleryImage').attr("src",$(e.relatedTarget).data("src"));
+            $('a[href*="#"]:not([href="#"])').click((e) => {
+                const target = $(e.target.hash);
+
+                if (target.length) {
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - 50
+                    }, 1000);
+
+                    return false;
+                }
             });
-        })(jQuery);
+        });
     </script>
 </body>
 
