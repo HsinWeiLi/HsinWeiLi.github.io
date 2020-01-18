@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
 body {
     background: url("2019_1228_16485700-01.jpg");
     background-attachment: fixed;
@@ -6,36 +9,36 @@ body {
     background-size: cover;
 }
 
-@import url('https://fonts.googleapis.com/css?family=Muli:300,400|Philosopher:400,700');
-
 /*---------- NAV ----------*/
 .navbar {
-    margin-bottom: 0;
+    background-color: rgba(38, 166, 153, 0.7);
     border: 0;
     font-size: 20px;
-    background-color: #ed7669;
+    margin-bottom: 0;
     overflow: hidden;
     text-decoration: none;
 }
 
-.navbar:hover {
-    box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+.navbar-brand {
+    font-family: 'Josefin Sans', sans-serif;   
 }
 
 .nav li a:link,
 .nav li a:visited {
-    text-align: left;
-    text-decoration: none;
-    color: #fff;
-    font-size: 17px;
     background-color: transparent;
+    color: #F0F0F1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none; 
 }
 
 @media screen and (min-width: 768px) {
     .nav li a:after {
         display: block;
         content: "";
-        border-bottom: solid 2px #f8eee7;
+        border-bottom: solid 2px #D9A86C;
         transform: scaleX(0);
         transition: transform 250ms ease-in-out;
         transform-origin: 100% 50%;
@@ -53,16 +56,15 @@ body {
     height: 5px;
     background-color: #49274a;
     margin: 6px 0;
-    box-shadow: 0 2px rgba(0, 0, 0, 0.5);
 }
 
 .navbar-brand:link,
 .navbar-brand:visited {
     font-size: 26px;
-    color: #fff;
+    color: #F0F0F1;
     margin-bottom: 3px;
 }
-
+/* 
 .navbar-brand:hover {
     color: #FCD757;
-}
+} */
