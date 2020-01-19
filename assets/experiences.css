@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+
+body {
+    background: #F0F0F1;
+}
+/* Navbar */
+.navbar {
+    background-color: #26A699;
+    border: 0;
+    font-size: 20px;
+    margin-bottom: 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+
+.navbar-brand {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+.nav li a:link,
+.nav li a:visited {
+    background-color: transparent;
+    color: #F0F0F1;
+    font-family: 'Raleway', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+    .nav li a:after {
+        display: block;
+        content: "";
+        border-bottom: solid 2px #D9A86C;
+        transform: scaleX(0);
+        transition: transform 250ms ease-in-out;
+        transform-origin: 100% 50%;
+    }
+
+    .nav li a:hover:after {
+        transform: scaleX(1);
+        transform-origin: 0 50%;
+    }
+}
+
+.icon-bar {
+    display: block;
+    width: 15px;
+    height: 5px;
+    background-color: #49274a;
+    margin: 6px 0;
+}
+
+.navbar-brand:link,
+.navbar-brand:visited {
+    font-size: 26px;
+    color: #F0F0F1;
+    margin-bottom: 3px;
+}
+
+/* Timeline */
+
+.container-fluid .row {
+    padding: 0 0 4em 0;
+}
+
+.example-basic h2 {
+    color: #D96B52;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.example-title {
+    text-align: center;
+    padding: 3em 0 1em 0;
+}
+
+/*==================================
+   TIMELINE
+   ==================================*/
+/*-- GENERAL STYLES
+   ------------------------------*/
+.timeline {
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/*----- TIMELINE ITEM -----*/
+.timeline-item {
+    padding-left: 40px;
+    position: relative;
+    font-family: 'Raleway', 'Noto Sans TC', sans-serif;
+}
+
+.timeline-title {
+    color: #D96B52;
+}
+
+.timeline-item p {
+    color: #363636;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.timeline-item ul li {
+    color: #363636;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.timeline-item ul li span {
+    color: #26A699;
+}
+
+.timeline-item:last-child {
+    padding-bottom: 0;
+}
+
+/*----- TIMELINE INFO -----*/
+.timeline-info {
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+    margin: 0 0 0.5em 0;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+/*----- TIMELINE MARKER -----*/
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 15px;
+}
+
+.timeline-marker:before {
+    background: #D9A86C;
+    border: 3px solid transparent;
+    border-radius: 100%;
+    content: "";
+    display: block;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    left: 0;
+    width: 15px;
+    transition: background 0.3s ease-in-out, border 0.3s ease-in-out;
+}
+
+.timeline-marker:after {
+    content: "";
+    width: 3px;
+    background: #CCD5DB;
+    display: block;
+    position: absolute;
+    top: 24px;
+    bottom: 0;
+    left: 6px;
+}
+
+.timeline-item:last-child .timeline-marker:after {
+    content: none;
+}
+
+.timeline-item:not(.period):hover .timeline-marker:before {
+    background: transparent;
+    border: 3px solid #D9A86C;
+}
+
+/*----- TIMELINE CONTENT -----*/
+.timeline-content {
+    padding-bottom: 40px;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+/*----- TIMELINE PERIOD -----*/
+.period {
+    padding: 0;
+}
+
+.period .timeline-info {
+    display: none;
+}
+
+.period .timeline-marker:before {
+    background: transparent;
+    content: "";
+    width: 15px;
+    height: auto;
+    border: none;
+    border-radius: 0;
+    top: 0;
+    bottom: 30px;
+    position: absolute;
+    border-top: 3px solid #CCD5DB;
+    border-bottom: 3px solid #CCD5DB;
+}
+
+.period .timeline-marker:after {
+    content: "";
+    height: 32px;
+    top: auto;
+}
+
+.period .timeline-content {
+    padding: 40px 0 70px;
+}
+
+.period .timeline-title {
+    color: #363636;
+    margin: 0;
+}
+
+/*----------------------------------------------
+   MOD: MARKER OUTLINE
+   ----------------------------------------------*/
+.marker-outline .timeline-marker:before {
+    background: transparent;
+    border-color: #D9A86C;
+}
+
+.marker-outline .timeline-item:hover .timeline-marker:before {
+    background: #D9A86C;
+}
