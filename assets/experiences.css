@@ -67,13 +67,13 @@ body {
     padding: 0 0 4em 0;
 }
 
-.example-basic h2 {
-    color: #D96B52;
+.example-title h2 {
+    color: #363636;
     font-family: 'Josefin Sans', sans-serif;
-}
-.example-title {
-    text-align: center;
+    font-size: 35px;
     padding: 3em 0 1em 0;
+    text-align: center;
+    white-space: nowrap;
 }
 
 /*==================================
@@ -118,6 +118,12 @@ body {
 
 .timeline-item:last-child {
     padding-bottom: 0;
+}
+
+.timeline-item img {
+    height: auto;
+    margin-top: 20px;
+    width: 60%;
 }
 
 /*----- TIMELINE INFO -----*/

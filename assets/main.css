@@ -1,8 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
 body {
-    background: url("2019_1228_16485700-01.jpg");
+    background-image: url("2019_1228_16485700-01.jpg");
     background-attachment: fixed;
     background-position: 0 70%;
     background-repeat: no-repeat;
